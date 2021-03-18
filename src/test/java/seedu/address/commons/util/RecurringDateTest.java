@@ -1,20 +1,27 @@
 package seedu.address.commons.util;
 
-import org.junit.jupiter.api.Test;
-
-import java.time.LocalDate;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+import java.time.LocalDate;
+
+import org.junit.jupiter.api.Test;
+
 public class RecurringDateTest {
 
-    private final LocalDate SEED_1 = LocalDate.of(2021, 03, 14);
-    private final LocalDate SEED_2 = LocalDate.of(2021, 03, 31);
+    private static final LocalDate SEED_1 = LocalDate.of(2021, 03, 14);
+    private static final LocalDate SEED_2 = LocalDate.of(2021, 03, 31);
 
     // leap years
-    private final LocalDate LEAP_YEAR_1 = LocalDate.of(2024, 02, 29);
-    private final LocalDate LEAP_YEAR_2 = LocalDate.of(2028, 02, 29);
+    private static final LocalDate LEAP_YEAR_1 = LocalDate.of(2024, 02, 29);
+    private static final LocalDate LEAP_YEAR_2 = LocalDate.of(2028, 02, 29);
+
+    @Test
+    public void recurringDate_equalTest_success() {
+        RecurringDate recurringDate1 = new RecurringDate(SEED_1, RecurringDate.RecurrenceType.WEEKLY);
+        RecurringDate recurringDate2 = new RecurringDate(SEED_1, RecurringDate.RecurrenceType.WEEKLY);
+        assertEquals(recurringDate1, recurringDate2);
+    }
 
     @Test
     public void recurringDate_weekTest_success() {

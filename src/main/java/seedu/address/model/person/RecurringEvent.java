@@ -1,10 +1,10 @@
 package seedu.address.model.person;
 
-import seedu.address.commons.util.RecurringDate;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
+
+import seedu.address.commons.util.RecurringDate;
 
 /**
  * Represents a RecurringDate event for a Person in the FriendDex.

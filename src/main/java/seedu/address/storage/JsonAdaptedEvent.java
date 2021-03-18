@@ -10,7 +10,7 @@ import seedu.address.commons.util.RecurringDate;
 import seedu.address.model.person.Event;
 import seedu.address.model.person.RecurringEvent;
 
-/**
+/**cl
  * Jackson-friendly version of {@link Event}.
  */
 public class JsonAdaptedEvent {
@@ -25,7 +25,8 @@ public class JsonAdaptedEvent {
      */
     @JsonCreator
     public JsonAdaptedEvent(@JsonProperty("date") LocalDate date, @JsonProperty("time") LocalTime time,
-            @JsonProperty("description") String description, @JsonProperty("recurrenceType") RecurringDate.RecurrenceType recurrenceType) {
+            @JsonProperty("description") String description,
+            @JsonProperty("recurrenceType") RecurringDate.RecurrenceType recurrenceType) {
         this.date = date;
         this.time = time;
         this.description = description;
@@ -37,7 +38,7 @@ public class JsonAdaptedEvent {
      */
     public JsonAdaptedEvent(Event source) {
         if (source.getClass().equals(RecurringEvent.class)) {
-            date = ((RecurringEvent)source).getSeed();
+            date = ((RecurringEvent) source).getSeed();
         } else {
             date = source.getDate();
         }

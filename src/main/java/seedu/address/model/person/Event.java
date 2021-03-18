@@ -81,8 +81,18 @@ public class Event {
         }
 
         Event otherEvent = (Event) other;
+
+        if (this.hasTime() != otherEvent.hasTime()) {
+            return false;
+        }
+
+        if (this.hasTime() && otherEvent.hasTime()) {
+            if (!this.getTime().equals(otherEvent.getTime())) {
+                return false;
+            }
+        }
+
         return otherEvent.getDate().equals(getDate())
-                && otherEvent.getTime().equals(getTime())
                 && otherEvent.getDescription().equals(getDescription());
     }
 
