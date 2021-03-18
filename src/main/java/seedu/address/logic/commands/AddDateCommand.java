@@ -2,8 +2,7 @@ package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_DATE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_DESCRIPTION;
+import static seedu.address.logic.parser.CliSyntax.*;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
 import java.util.ArrayList;
@@ -27,7 +26,8 @@ public class AddDateCommand extends Command {
             + "by the index number used in the displayed person list.\n"
             + "Parameters: INDEX (must be a positive integer) "
             + PREFIX_DATE + "DATE "
-            + PREFIX_DESCRIPTION + "DESCRIPTION \n"
+            + PREFIX_DESCRIPTION + "DESCRIPTION "
+            + "[" + PREFIX_WEEK + " | " + PREFIX_MONTH + "]\n"
             + "Example: " + COMMAND_WORD + " 1 "
             + PREFIX_DATE + "12-12-2021 "
             + PREFIX_DESCRIPTION + "Wedding Anniversary";

@@ -19,6 +19,10 @@ public class CliSyntax {
     public static final Prefix PREFIX_TIME = new Prefix("t/");
     public static final Prefix PREFIX_DESCRIPTION = new Prefix("desc/");
 
+    // Recurring dates
+    public static final Prefix PREFIX_WEEK = new Prefix("w/");
+    public static final Prefix PREFIX_MONTH = new Prefix("m/");
+
     // For commands that need a secondary index
     public static final Prefix PREFIX_INDEX = new Prefix("i/");
 

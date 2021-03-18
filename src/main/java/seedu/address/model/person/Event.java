@@ -13,13 +13,13 @@ import seedu.address.commons.util.TimeUtil;
  * Represents a Date event for a Person in the FriendDex.
  */
 public class Event {
+
     protected final LocalDate date;
     protected final LocalTime time;
     protected final String description;
 
     /**
      * Constructs a {@code Event}
-     *
      * @param date A valid date.
      * @param description A description of the event.
      */
@@ -32,7 +32,6 @@ public class Event {
 
     /**
      * Constructs a {@code Event}
-     *
      * @param date A valid date.
      * @param time A valid time.
      * @param description A description of the event.
