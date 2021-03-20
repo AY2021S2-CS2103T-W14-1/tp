@@ -13,14 +13,17 @@ import seedu.address.commons.util.TimeUtil;
  * Represents a Date event for a Person in the FriendDex.
  */
 public class Event {
-
-    protected final LocalDate date;
-    protected final LocalTime time;
-    protected final String description;
+    public static final String DESCRIPTION_MESSAGE_CONSTRAINTS =
+            "Description can take any values, and it should not be blank";
+    public static final String DESCRIPTION_VALIDATION_REGEX = "[^\\s].*";
+    private final LocalDate date;
+    private final LocalTime time;
+    private final String description;
 
     /**
      * Constructs a {@code Event}
-     * @param date A valid date.
+     *
+     * @param date        A valid date.
      * @param description A description of the event.
      */
     public Event(LocalDate date, String description) {
@@ -43,6 +46,13 @@ public class Event {
         this.description = description;
     }
 
+    /**
+     * Returns true if a given string is a valid description.
+     */
+    public static boolean isValidDescription(String test) {
+        return test.matches(DESCRIPTION_VALIDATION_REGEX);
+    }
+
     public LocalDate getDate() {
         return date;
     }
@@ -61,6 +71,7 @@ public class Event {
 
     /**
      * Returns the string to be displayed on the UI
+     *
      * @return String to be displayed on the UI
      */
     public String toUi() {
