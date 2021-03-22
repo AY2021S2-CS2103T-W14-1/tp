@@ -32,9 +32,9 @@ class JsonAdaptedPerson {
     private final String phone;
     private final String email;
     private final String birthday;
-
     private final String address;
     private final JsonAdaptedPicture picture;
+
     private final List<JsonAdaptedTag> tagged = new ArrayList<>();
     private final List<JsonAdaptedEvent> dates = new ArrayList<>();
     private final List<JsonAdaptedEvent> meetings = new ArrayList<>();

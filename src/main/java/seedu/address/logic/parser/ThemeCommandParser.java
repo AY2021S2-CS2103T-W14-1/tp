@@ -15,7 +15,6 @@ public class ThemeCommandParser implements Parser<ThemeCommand> {
             );
         }
         String[] nameKeywords = trimmedArgs.split("\\s+");
-
         return new ThemeCommand(nameKeywords[0]);
     }
 }
