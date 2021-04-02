@@ -137,7 +137,7 @@ Shows a message explaining how to access the help page.
 
 Format: `help`
 
-### Creating a friend group : `group`
+### Creating a friend group : `add-group`
 
 Creates a new friend group to FriendDex with a specified name and adds all the people at the specified
 indexes to the group.
@@ -150,6 +150,17 @@ Format: `add-group n/GROUP_NAME p/INDEX…​`
 
 Examples:
 * `add-group n/Close Friends  p/1 2 3 4 5`
+
+### Deleting a friend group : `delete-group`
+
+Deletes an existing friend group.
+
+Format: `delete-group n/GROUP_NAME`
+
+*You should provide an existing group name in the application.
+
+Examples:
+* `delete-group n/Close Friends`
 
 ### Adding a person : `add`
 
@@ -447,7 +458,8 @@ If the previous theme file supplied is not found or unreadable, then the default
 Action | Format, Examples
 --------|------------------
 **Add** | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [b/BIRTHDAY] [t/TAG]…​`<br> e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
-**Group** | `add-group n/GROUP_NAME p/[INDEX...]`<br> e.g. `add-group n/Close Friends p/1 2 3 4`
+**Add a Group** | `add-group n/GROUP_NAME p/[INDEX...]`<br> e.g. `add-group n/Close Friends p/1 2 3 4`
+**Delete a Group** | `delete-group n/GROUP_NAME` <br> e.g. `delete-group n/Close Friends`
 **Add Profile Picture** | `add-picture INDEX FILE_PATH`<br> e.g. `picture 1 /Users/john/Desktop/jake.png`
 **Clear** | `clear`
 **Delete** | `delete INDEX`<br> e.g. `delete 3`
